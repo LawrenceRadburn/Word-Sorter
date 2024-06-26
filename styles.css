@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
-
+    margin: 0;
 }
 
 p {
@@ -12,15 +12,36 @@ p {
 .container {
     display: flex;
     width: 100%;
-    justify-content: space-around;
-    max-width: 1200px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .column {
-    flex: 1;
-    margin: 0 100px;
     padding: 10px;
     box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.column:nth-child(1) {
+    flex: 2;
+    background-color: rgb(236, 236, 236);
+    border: solid 2px black;
+}
+
+.column:nth-child(2) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+.column:nth-child(3) {
+    flex: 1;
+    background-color: rgb(236, 236, 236);
+    border: solid 2px black;
 }
 
 .center-text {
@@ -28,11 +49,26 @@ p {
 }
 
 #results {
+    margin-left: 70px;
     border: solid, 2px black;
     height: 800px;
     width: 300px;
+    padding-left: 10px;
+    background-color: white;
+    
+}
+
+input {
+    height: 22px;
+    border: 1px, black, solid;
 }
 
 button {
     margin-top: 20px;
+    width: 90px;
+    height: 50px;
+    background: linear-gradient(to top, rgb(23, 23, 155), lightblue);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
