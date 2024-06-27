@@ -13,17 +13,19 @@ p {
     display: flex;
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
 }
 
 .column {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
-    box-sizing: border-box;
     flex-grow: 1;
+    align-items: center;
 }
 
 .column:nth-child(1) {
     flex: 2;
+    display: flex;
     background-color: rgb(236, 236, 236);
     border: solid 2px black;
 }
@@ -33,7 +35,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10%;
     border-top: solid 2px black;
     border-bottom: solid 2px black;
 }
@@ -49,7 +50,6 @@ p {
 }
 
 #results {
-    margin-left: 70px;
     border: solid, 2px black;
     height: 800px;
     width: 300px;
